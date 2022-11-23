@@ -11,7 +11,7 @@ public class Contato {
     private Long id;
 
     @ManyToOne
-    @JoinColumn (name = "clienteid")
+    @JoinColumn (name = "idcliente")
     private Cliente cliente;
 
     public Cliente getCliente() {
@@ -22,7 +22,7 @@ public class Contato {
         this.cliente = cliente;
     }
 
-    private String decricao;
+    private String descricao;
     private String  contato;
 
     public Long getId() {
@@ -34,11 +34,11 @@ public class Contato {
     }
 
     public String getDecricao() {
-        return decricao;
+        return descricao;
     }
 
     public void setDecricao(String decricao) {
-        this.decricao = decricao;
+        this.descricao = decricao;
     }
 
     public String getContato() {

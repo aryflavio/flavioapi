@@ -1,5 +1,6 @@
 package br.com.flavio.flavioapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
@@ -17,6 +18,7 @@ public class Cliente {
     private String nome;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
     private List<Contato> contato = new ArrayList<>();
 
     public List<Contato> getContato() {
